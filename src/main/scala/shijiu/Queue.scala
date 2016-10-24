@@ -4,6 +4,7 @@ trait Queue[+T] {
   def head:T
   def tail:Queue[T]
   def append[ U >: T](x:U):Queue[U]
+//  def append(x:T):Queue[T]
 }
 
 object Queue{
@@ -41,6 +42,7 @@ object Queue{
     def append[ U >: T](x:U):Queue[U] = {
       new QueueImpl(leading, x::trailing)
     }
+
 
     override def toString: String = {
       (leading ::: this.trailing).mkString("[",",","]")

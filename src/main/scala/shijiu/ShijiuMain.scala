@@ -1,16 +1,20 @@
 package shijiu
 
 import com.sun.glass.ui.Application
+import shijiu.libian.Publication
 
 /**
   * Created by Pascal on 2016/10/13.
   */
 object ShijiuMain {
-  def doesNotCompile(q:Queue[AnyRef]): Unit ={
+  def doesNotCompile(q:Queue[Any]): Unit ={
     println(q)
   }
   def main(args:Array[String]): Unit ={
     println(1);
+    val o :Apple =  new Apple("f");
+    val p : Queue.QueueImpl[Any]=  Queue("sss","AAA");
+    doesNotCompile(p);
 //    val queue: Queue[Int] = Queue(1,2,3)
 //    val append: Queue[Int] = queue.append(4)
 //    println(append)
@@ -30,8 +34,19 @@ object ShijiuMain {
 //    val c2 :Cell[AnyRef] = c1
     //c2.set(1)
 
-    def getTitle(p:Publication):String = p.title
-    Library.printBookList(getTitle)
+//    def getTitle(p:Publication):String = p.title
+//    Library.printBookList(getTitle)
+
+//    val f1 : Fruit = new Fruit("f1");
+//    val f2 : Fruit = new Fruit("f2");
+//    val apple :Apple = new Apple("apple");
+//    val q  = Queue2(f1,f2);
+//    val q2=q.append(apple)
+//    println(q2.toString)
+//
+//    val q3 = Queue2(apple)
+//    val q4 = q3.append(f1)
+//    println(q4)
   }
 
 
@@ -47,12 +62,12 @@ class Publication(val title:String)
 class Book(title:String ) extends  Publication(title)
 
 object Library{
-  val books:Set[Book] =
+  val books:Set[libian.Book] =
     Set(
-      new Book("Programming in Scala"),
-      new Book("Walden")
+      new libian.Book("Programming in Scala"),
+      new libian.Book("Walden")
     )
-  def printBookList(info:Book=>AnyRef): Unit ={
+  def printBookList(info:libian.Book=>AnyRef): Unit ={
     for(book<-books)println(info(book))
   }
 }

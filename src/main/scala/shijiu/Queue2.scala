@@ -37,6 +37,7 @@ object Queue2{
       new Queue2Impl(leading, x::trailing)
     }
 
+
     override def toString: String = {
       (leading ::: this.trailing).mkString("[",",","]")
     }
