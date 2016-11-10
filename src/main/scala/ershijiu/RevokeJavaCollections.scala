@@ -12,8 +12,8 @@ import scala.collection.JavaConversions._
 object RevokeJavaCollections{
   def getList={
     val list=new ArrayList[String]()
-    list.add("摇摆少年梦")
-    list.add("学途无忧网金牌讲师")
+    list.add("a1")
+    list.add("a2")
     list
   }
   def main(args: Array[String]) {

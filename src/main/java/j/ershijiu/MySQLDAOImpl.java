@@ -1,4 +1,4 @@
-package java.ershijiu;
+package j.ershijiu;
 
 import ershijiu.MySQLDAO;
 import scala.collection.immutable.List;

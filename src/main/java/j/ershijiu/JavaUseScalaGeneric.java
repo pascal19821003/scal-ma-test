@@ -1,6 +1,7 @@
-package java.ershijiu;
+package j.ershijiu;
 
 import ershijiu.Student;
+import ershijiu.Teacher;
 
 /**
  * Created by Pascal on 2016/11/8.
@@ -10,5 +11,8 @@ public class JavaUseScalaGeneric {
         Student<String ,Integer> s  = new Student<String, Integer>("a",1);
         System.out.println(s.getName());
         System.out.println(s.name());
+
+        Teacher<String , Integer > t = new Teacher<String, Integer>("t", 1);
+        System.out.println(t.name());
     }
 }
