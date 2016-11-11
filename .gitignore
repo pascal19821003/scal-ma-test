@@ -26,3 +26,5 @@ test.txt
 test-output
 
 
+out/
+src/main/scala/t/

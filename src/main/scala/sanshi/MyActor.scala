@@ -1,14 +1,14 @@
 package sanshi
 
-import akka.actor.{Actor, ActorSystem, Props}
+import akka.actor.{Actor, ActorLogging, ActorSystem, Props}
 import akka.actor.Actor.Receive
 import akka.event.Logging
 
 /**
   * Created by Pascal on 2016/11/9.
   */
-class MyActor  extends Actor {
-  val log = Logging(context.system, this)
+class MyActor  extends Actor with ActorLogging {
+  //val log = Logging(context.system, this)
 
   override def receive: Receive = {
     case "test" => log.info("received test")
