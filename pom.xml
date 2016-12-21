@@ -89,7 +89,7 @@
     <sourceDirectory>src/main/scala</sourceDirectory>
     <testSourceDirectory>src/test/scala</testSourceDirectory>
     <plugins>
-      <plugin>
+      <!--<plugin>
         <groupId>org.scala-tools</groupId>
         <artifactId>maven-scala-plugin</artifactId>
         <executions>
@@ -103,10 +103,11 @@
         <configuration>
           <scalaVersion>${scala.version}</scalaVersion>
           <args>
-            <arg>-target:jvm-1.5</arg>
+            <arg>-target:jvm-1.7</arg>
           </args>
         </configuration>
-      </plugin>
+      </plugin>-->
+    <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-eclipse-plugin</artifactId>
@@ -124,9 +125,10 @@
           </classpathContainers>
         </configuration>
       </plugin>
+    -->
     </plugins>
   </build>
-  <reporting>
+<!--  <reporting>
     <plugins>
       <plugin>
         <groupId>org.scala-tools</groupId>
@@ -136,5 +138,5 @@
         </configuration>
       </plugin>
     </plugins>
-  </reporting>
+  </reporting>-->
 </project>
